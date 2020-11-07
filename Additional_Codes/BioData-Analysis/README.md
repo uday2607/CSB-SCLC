@@ -12,8 +12,8 @@ An **.in** file in **infiles** folder sends information to **[Parser file](https
 | **Infile**          	| = 	| {Name of the data set (along with file extension) }                                        	|
 | **log2**            	| = 	| {True/False} # Whether or not to apply log2 on dataset values                              	|
 | **All_samples**     	| = 	| {True/False} # Boolean value on whether or not to take all cell lines/ samples              	|
-| **Select_samples**  	| = 	| {Cell lines which are **ONLY** to be considered} # You can only "select" samples or "reject" samples. **You can't do both at the same time!!**(wicked weird things happens) 	|
-| **Deselct_samples** 	| = 	| {Cell lines which are **NOT** to be included} # Opposite of select_columns                     	|
+| **Select_samples**  	| = 	| {Cell lines which are **ONLY** to be considered, seperated by a **comma(,)**} # You can only "select" samples or "reject" samples. **You can't do both at the same time!!**(wicked weird things happens) 	|
+| **Deselct_samples** 	| = 	| {Cell lines which are **NOT** to be included, seperated by a **comma(,)**} # Opposite of select_columns                     	|
 | **Title**           	| = 	| {Title to be used for the plots generated}                                                       	|
 | **OutFolder**       	| = 	| {Folder to which plots are to be saved}                                                    	|
 
@@ -21,7 +21,7 @@ For example, you can loop at **.in** files present [here](https://github.com/uda
     
 **NOTE:** In **Select_samples** and **Deselect_samples**, cell line names are to be seperated using a **comma(,)**. If most of the cell line indices are serial i.e.. "Sample1, Sample2, Sample3 ... SampleN" and many samples are to be selected/rejected, one can use ":" to specify "from" and "to" to select/reject the cell lines. Example:  
   
-<p align="center">Select_samples = sample2, sample4 , sample10:sample34, sample39  <br>
+<p align="center">Select_samples = sample2, sample4 , sample10:sample34, sample39 <br>  
 ("from:to" -> "FROM" sample "TO" sample. Both are inclusive)  </p>
 
 ### Input file

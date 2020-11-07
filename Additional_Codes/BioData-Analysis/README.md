@@ -21,7 +21,7 @@ For example, you can loop at **.in** files present [here](https://github.com/uda
     
 **NOTE:** In **Select_samples** and **Deselect_samples**, cell line names are to be seperated using a **comma(,)**. If most of the cell line indices are serial i.e.. "Sample1, Sample2, Sample3 ... SampleN" and many samples are to be selected/rejected, one can use ":" to specify "from" and "to" to select/reject the cell lines. Example:  
   
-<p align="center">Select_samples = sample2, sample4 , sample10:sample34, sample39  
+<p align="center">Select_samples = sample2, sample4 , sample10:sample34, sample39  <br>
 ("from:to" -> "FROM" sample "TO" sample. Both are inclusive)  </p>
 
 ### Input file

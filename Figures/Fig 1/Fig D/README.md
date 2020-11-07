@@ -2,7 +2,7 @@
 
 ##### Fig 1D i
 
-**racipe_bool.py** generates the **Fig 1D i** using Boolean Simulation data which can be found [here](https://github.com/uday2607/CSB-SCLC/Simulation_Data) and RACIPE data [here](). Place all data files into this folder and run the python script.
+**racipe_bool.py** generates the **Fig 1D i** using Boolean Simulation data which can be found [here](https://github.com/uday2607/CSB-SCLC/Simulation_Data) and RACIPE data [here](https://drive.google.com/drive/folders/1PKs5vHkXCoJm9Wcg7P4nBPdPrFJCxJ5B?usp=sharing). Place all data files into this folder and run the python script.
 
 ##### Fig 1D ii
 

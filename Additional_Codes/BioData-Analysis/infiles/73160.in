@@ -1,0 +1,8 @@
+InFolder = Datasets
+Infile = mGSE73160.txt
+log2 = False
+All_samples = False
+Select_samples = 
+Deselct_samples = GSM1887886, GSM1887896, GSM1887906, GSM1887917, GSM1887928, GSM1887937, GSM1887939, GSM1887942, GSM1887948, GSM1887946, GSM1887949, GSM1887951
+Title = 73160
+OutFolder = 73160

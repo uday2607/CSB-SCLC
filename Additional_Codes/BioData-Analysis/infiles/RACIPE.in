@@ -1,0 +1,8 @@
+InFolder = Datasets
+Infile = racipe_up.data
+log2 = Flase
+All_samples = True
+Select_samples = 
+Deselct_samples = 
+Title = RACIPE
+OutFolder = RACIPE

@@ -1,0 +1,16 @@
+network = sclcnetwork
+node_values = 1,-1
+ini_on = 
+ini_off =  
+fixed_on = 
+fixed_off =  
+turn_off = 
+turn_on = 
+plot_nodes = 
+rounds = 1048576
+steps = 5000
+mode = Async
+model = Ising
+NetworkX = False
+Parallel_Process = True
+Number_processes = 8

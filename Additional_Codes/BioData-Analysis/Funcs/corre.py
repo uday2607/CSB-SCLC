@@ -5,10 +5,9 @@ import matplotlib.pyplot as plt
 from scipy.special import betainc
 import os, pickle
 from pathlib import Path
-from Parse import parsefile
 import seaborn as sns
 
-def Correlation(Data,title,folder):
+def Correlation(Data,title,folder,**kwargs):
 
     if not os.path.exists(Path(folder)):
         os.mkdir(Path(folder))
@@ -71,43 +70,5 @@ def Correlation(Data,title,folder):
         fig, ax = plt.subplots(figsize=(50,50))
         hmap=sns.heatmap(df_lt,cmap="seismic",square = True,linewidths=.3,clim=[-1,1],xticklabels=False)
         ax.set_yticklabels(range(1,34),rotation=360)
-        hmap.figure.savefig("{}_corr.png".format(title),format='png')
+        hmap.figure.savefig(Path(folder,"{}_corr.png".format(title)),format='png')
         plt.close()
-
-
-    fig = plt.figure(figsize=(8,8))
-    ax1 = fig.add_subplot(111)
-    plt.imshow(DATA, cmap='seismic', interpolation='nearest')
-    plt.colorbar()
-    plt.clim(-1,1)
-    ax1.set_xticks(np.arange(len(top)))
-    ax1.set_yticks(np.arange(len(top)))
-    ax1.set_xticklabels(top,rotation=90, fontsize=10)
-    ax1.set_yticklabels(top,fontsize=10)
-    plt.setp(ax1.get_xticklabels(), rotation=45, ha="right",
-             rotation_mode="anchor")
-
-    @nb.jit(nogil = True,cache = True,fastmath = True)
-    def metric(DATA):
-        a1 = np.sum(DATA[:22, :22])
-        a2 = np.sum(DATA[23:, 23:])
-        a3 = np.sum(DATA[23:,:22]) + np.sum(DATA[:22,23:])
-        num = a1 + a2 - a3
-        num = (num-32)/2
-        return num
-
-    num = metric(DATA)
-
-    plt.suptitle("{}: Correlation Plot | Metric J = {}".format(title,num))
-    for i in range(len(Nodes)):
-        for j in range(len(Nodes)):
-            data_p = P[i][j]
-            if data_p < 0.001:
-                text = ax1.text(j, i, '***', ha="center", va="center", color="w", fontsize = 7)
-            elif data_p < 0.005:
-                text = ax1.text(j, i, '**', ha="center", va="center", color="w", fontsize = 7)
-            elif data_p < 0.05:
-                text = ax1.text(j, i, '*', ha="center", va="center", color="w", fontsize = 7)
-
-    plt.savefig(Path(folder,'corre.jpeg'))
-    plt.close()

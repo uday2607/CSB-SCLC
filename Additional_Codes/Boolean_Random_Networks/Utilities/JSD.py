@@ -1,6 +1,7 @@
 import numpy as np
 import scipy.stats
 from numpy.linalg import norm
+from scipy.spatial import distance
 import os
 import pickle
 import pandas as pd
@@ -32,7 +33,7 @@ def JSD(p, q):
     m = (p + q) / 2
 
     # compute Jensen Shannon Divergence
-    divergence = (scipy.stats.entropy(p, m) + scipy.stats.entropy(q, m)) / 2
+    divergence = distance.jensenshannon(p,q, base = 2) ** 2
 
     # compute the Jensen Shannon Distance
     #distance = np.sqrt(divergence)
@@ -62,7 +63,7 @@ def compute_JSD(Wfile, Mfile, run_no):
     FreqW = []
     FreqM = []
 
-    states = list(set(W_states),set(M_states))
+    states = list(set(W_states) & set(M_states))
     if len(states) == 0:
         FreqW = np.array(W_freq + [0]*len(M_freq))
         FreqM = np.array([0]*len(W_freq) + M_freq)
@@ -73,8 +74,8 @@ def compute_JSD(Wfile, Mfile, run_no):
 
         FreqW_nu = list(set(W_freq)-set(FreqW))
         FreqM_nu = list(set(M_freq)-set(FreqM))
-        WW = len(FreqW_nu)
         MM = len(FreqM_nu)
+        WW = len(FreqW_nu)
         FreqW = np.array(FreqW + FreqW_nu + [0]*(MM))
         FreqM = np.array(FreqM + [0]*(WW) + FreqM_nu)
 
@@ -84,7 +85,9 @@ def compute_JSD(Wfile, Mfile, run_no):
         Boolean = "False"
 
     jsd = JSD(FreqW, FreqM)
+    print(jsd)
 
     f = open(os.path.join("OUTPUT",'jsd.txt'),'a')
     f.write(str(run_no) + "\t" + str(len(W_states)) + "\t" + str(len(M_states)) + "\t" + str(jsd) + "\t" + Boolean + "\n")
     f.close()
+

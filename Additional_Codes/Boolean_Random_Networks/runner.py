@@ -3,8 +3,11 @@ from Utilities.RandNetworkFiles import GenRandNetworks
 from Utilities.JSD import compute_JSD
 import bool
 from correlation import corre
+from random_correlation import random_corre
 from influence import Influ
 from misc_funcs import Interaction
+import pandas as pd
+import numpy as np
 
 start_time = time.time()
 
@@ -31,10 +34,17 @@ f = open(os.path.join("OUTPUT",'corre.txt'),'w')
 f.write("Run" + "\t" + "Corre W" + "\t" + "Corre R" + "\t" + "Same matrix" + "\n")
 f.close()
 
+f = open(os.path.join("OUTPUT",'influ.txt'),'w')
+f.write("Run" + "\t" + "Influ W" + "\t" + "Influ R" + "\t" + "Same matrix" + "\n")
+f.close()
+
+J_vals = pd.DataFrame(index = np.arange(1001), columns = np.arange(1000))
+
 wild_type = "Output" + "_" + network
-#bool.main(network,wild_type)
+bool.main(network,wild_type)
 numb = corre(wild_type,wild_type,top,nodes,0,0)
-#Influ(wild_type,top,nodes)
+num_i = Influ(wild_type,top,nodes,0,0)
+J_vals.iloc[0] = random_corre(wild_type,top,nodes)
 
 time_taken = time.time() - start_time
 print("Time elapsed %s" %time_taken)
@@ -43,12 +53,14 @@ for i in range(1,1001):
     in_file = network + "_" + str(i)
     out_file = "Output" + "_" + network + "_" + str(i)
     print("Running %s file" %i)
-    #bool.main(in_file,out_file)
+    bool.main(in_file,out_file)
     compute_JSD(wild_type,out_file,i)
     corre(wild_type,out_file,top,nodes,i,numb)
-    #Influ(out_file,top,nodes)
+    Influ(out_file,top,nodes,i,num_i)
+    J_vals.iloc[i] = random_corre(out_file,top,nodes)
     time_taken = time.time()  -start_time
     print("Time elapsed %s" %time_taken)
     gc.collect()
 
+J_vals.to_excel("Boolean_J_vals.xlsx")
 print("All the analysis is done")

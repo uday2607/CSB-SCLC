@@ -1,6 +1,6 @@
 from Parse import *
 from pickle_data import Pickle_Data
-from Funcs.pca_corre import PCA_analysis
+from Funcs.corre import Correlation
 from Funcs.k_means import K_analysis
 from Funcs.Hierarcheal import Hier_analysis
 from Funcs.bargraph import Hier_BarGraph, K_BarGraph

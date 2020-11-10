@@ -19,7 +19,7 @@ A **.in** file in ``infiles`` folder sends information to [``Parser file``](http
 
 For example, you can look at **.in** files present [here](https://github.com/uday2607/CSB-SCLC/tree/master/Additional_Codes/BioData-Analysis/infiles) to get a better understanding.
     
-**NOTE:** In **Select_samples** and **Deselect_samples**, cell line names are to be seperated using a **comma(,)**. If most of the cell line indices are serial i.e.. "Sample1, Sample2, Sample3 ... SampleN" and many samples are to be selected/rejected, one can use ":" to specify "from" and "to" to select/reject the cell lines. Example:  
+**NOTE:** In **Select_samples** and **Deselect_samples**, cell line names are to be seperated using a **comma(,)**. If most of the cell line indices are serial i.e.. "Sample1, Sample2, Sample3 ... SampleN" and many samples are to be selected/rejected, one can use "**colon(:)**" to specify "from" and "to" to select/reject the cell lines. Example:  
   
 <p align="center",display: inline-block>Select_samples = sample2, sample4 , sample10:sample34, sample39 <br>  
 ("from:to" -> "FROM" sample "TO" sample. Both are inclusive)  </p>

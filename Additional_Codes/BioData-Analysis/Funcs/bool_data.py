@@ -97,7 +97,7 @@ def Hier_Bool(Data, title, folder, **kwargs):
             for j in range(len(STATES)):
                 text = ax1.text(j, i, '%0.3f' % matrix[i, j], ha="center", va="center", color="black", fontsize = 7.5)
         plt.suptitle(title+": "+"Heatmap of distance of States from Hier({}) to Boolean ({}) states".format(h, len(STATES)))
-        plt.savefig(Path(folder,title+"_"+"Heatmap_dis_Hier({})_to_Boolean({}).png".format(h, len(STATES))), format='png')
+        plt.savefig(Path(folder,title+"_"+"Heatmap_dis_Hier({})_to_Boolean({}).png".format(h, len(STATES))), format='png', bbox_inches = "tight")
         plt.cla()
         plt.clf()
 
@@ -184,7 +184,7 @@ def K_Bool(Data, title, folder, **kwargs):
             for j in range(len(STATES)):
                 text = ax1.text(j, i, '%0.3f' % matrix[i, j], ha="center", va="center", color="black", fontsize = 7.5)
         plt.suptitle(title+": "+"Heatmap of distance of States from K({}) to Boolean ({}) states".format(k, len(STATES)))
-        plt.savefig(Path(folder,title+"_"+"Heatmap_dis_K({})_to_Boolean({}).png".format(k, len(STATES))), format='png')
+        plt.savefig(Path(folder,title+"_"+"Heatmap_dis_K({})_to_Boolean({}).png".format(k, len(STATES))), format='png', bbox_inches = "tight")
         plt.cla()
         plt.clf()
 

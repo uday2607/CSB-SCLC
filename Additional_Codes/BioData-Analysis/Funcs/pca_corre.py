@@ -100,4 +100,4 @@ def PCA_analysis(Data,title,folder,**kwargs):
             elif data_p < 0.05:
                 text = ax1.text(j, i, '*', ha="center", va="center", color="w", fontsize = 7)
 
-    plt.savefig(Path(folder,title+"_"+'Correlation_All_Nodes.png'))
+    plt.savefig(Path(folder,title+"_"+'Correlation_All_Nodes.png'),bbox_inches = "tight")

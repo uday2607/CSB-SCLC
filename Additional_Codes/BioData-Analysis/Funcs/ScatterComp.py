@@ -38,7 +38,7 @@ def ScatComp(Data, title, folder,**kwargs):
         os.mkdir(Path(folder,"Test"))
     ## append list of nodes that needs to be scattered plotted
     for node in Nodes:
-        if node != "NEUROD1":    
+        if node != "NEUROD1":
             plot_nodes = []
             plot_nodes.append([node,'NEUROD1']) ######################################
             for pnodes in plot_nodes:
@@ -49,12 +49,12 @@ def ScatComp(Data, title, folder,**kwargs):
                 clr[np.logical_and(Y>0,Z<0)] = 1
                 clr[np.logical_and(Y<0,Z>0)] = 2
                 clr[np.logical_and(Y>0,Z>0)] = 3
-            
+
                 fig , ax = plt.subplots()
                 sns.set_context("paper", font_scale=1.5)
                 plt.suptitle(title+": Scatter plot of {} and {}.png".format(pnodes[0],pnodes[1]))
                 ax.scatter(X, Y, s = 25, c = clr)
                 ax.set_xlabel(pnodes[0])
                 ax.set_ylabel(pnodes[1])
-                plt.savefig(str(folder)+"/Test/Test"+pnodes[0]+"_"+pnodes[1]+".png",format="png")
+                plt.savefig(str(folder)+"/Test/Test"+pnodes[0]+"_"+pnodes[1]+".png",format="png",bbox_inches = "tight")
                 plt.close(fig)

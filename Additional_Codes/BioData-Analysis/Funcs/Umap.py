@@ -42,7 +42,7 @@ def UMAP_analysis(Data, title, folder, **kwargs):
     Scaled_data = np.array(pd.DataFrame(Scaled_data,columns = TADA))
     if not os.path.exists(Path(folder,"UMAP")):
         os.mkdir(Path(folder,"UMAP"))
-    
+
     DATA = Data.loc[Nodes]
     DATA = DATA.astype(float)
 
@@ -62,5 +62,5 @@ def UMAP_analysis(Data, title, folder, **kwargs):
             # plt.title(title+': UMAP_{}_Nodes={}_Exp:{}_n={}'.format(str(j),TADA,node,str(n_neighbors)))
             plt.title('{}'.format(node))
             plt.colorbar()
-            plt.savefig(Path(folder,"UMAP",title+'_UMAP_{}_Nodes={}_Exp{}_n={}.png'.format(str(j),str(len(TADA)),node,str(n_neighbors))), format='png')
+            plt.savefig(Path(folder,"UMAP",title+'_UMAP_{}_Nodes={}_Exp{}_n={}.png'.format(str(j),str(len(TADA)),node,str(n_neighbors))), format='png', bbox_inches = "tight")
             plt.close()

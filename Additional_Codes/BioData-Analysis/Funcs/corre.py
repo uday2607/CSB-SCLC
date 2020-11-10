@@ -70,5 +70,5 @@ def Correlation(Data,title,folder,**kwargs):
         fig, ax = plt.subplots(figsize=(50,50))
         hmap=sns.heatmap(df_lt,cmap="seismic",square = True,linewidths=.3,clim=[-1,1],xticklabels=False)
         ax.set_yticklabels(range(1,34),rotation=360)
-        hmap.figure.savefig(Path(folder,"{}_corr.png".format(title)),format='png')
+        hmap.figure.savefig(Path(folder,"{}_corr.png".format(title)),format='png',bbox_inches = "tight")
         plt.close()

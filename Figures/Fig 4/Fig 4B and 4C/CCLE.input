@@ -1,0 +1,4 @@
+IN = CCLE.in
+funcs = Hier_analysis,Hier_Scat,K_analysis,K_BarGraph
+Nodes = ASCL1,NEUROD1
+Color = ASCL1,NEUROD1

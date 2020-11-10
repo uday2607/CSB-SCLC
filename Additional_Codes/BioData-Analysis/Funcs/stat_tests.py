@@ -118,7 +118,7 @@ def Hier_significance(Data, title, folder,**kwargs):
         LABELS = ['+','*']
         figure.legend([create_proxy(item) for item in LABELS], ['bio','stat'], fontsize = 45)
         plt.suptitle(title+": "+"Difference between mean expression levels of Choosen ({}) nodes, Hier : {}".format(len(Nodes),h), fontsize = 30)
-        plt.savefig(Path(folder,out,title+"_"+"Difference between mean expression levels of Choosen ({}) nodes, Hier : {}".format(len(Nodes),h)))
+        plt.savefig(Path(folder,out,title+"_"+"Difference between mean expression levels of Choosen ({}) nodes, Hier : {}".format(len(Nodes),h)),bbox_inches = "tight")
 
         for ii, node in enumerate(Nodes):
             Ax[ii].clear()

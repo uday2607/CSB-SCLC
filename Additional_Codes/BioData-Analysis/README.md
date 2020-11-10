@@ -1,6 +1,6 @@
 # BioData Analysis  
    
-A collection of codes generated (for SCLC project) to run data analysis on SCLC datasets using several algorithms. These codes can be used to run analysis on Bulk RNA data, Single Seq data,Tumor cell lines and several other experimental data sets. The functions/ algorithms used to run the analysis can be found in [Funcs](https://github.com/uday2607/CSB-SCLC/tree/master/Additional_Codes/BioData-Analysis/Funcs) folder.
+A collection of codes generated (for SCLC project) to run data analysis on SCLC datasets using several algorithms. These codes can be used to run analysis on Bulk RNA data, Single Seq data,Tumor cell lines and several other experimental data sets. The functions/ algorithms used to run the analysis can be found in [Funcs](https://github.com/uday2607/CSB-SCLC/tree/master/Additional_Codes/BioData-Analysis/Funcs) folder. For this project, CCLE (can be found [here](https://data.broadinstitute.org/ccle_legacy_data/mRNA_expression/CCLE_Expression_2012-09-29.res)) and GSM73160 (can be found [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE73160)) are used. Text files of the datasets can be found in **Datasets** folder.
   
 ### How to use the codes?  
 #### IN file  

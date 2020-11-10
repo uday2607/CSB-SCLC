@@ -23,6 +23,7 @@ This folder contains all the codes required for data analysis and simulation of 
 git clone https://github.com/uday2607/CSB-SCLC
 ```
 **2.** Set the working directory to ``CSB-SCLC``
+
 **3.** Install all the Required Python Packages (**Conda** is preferable)
 ```
 while read requirement; do conda install --yes $requirement || pip install $requirement; done < requirements.txt

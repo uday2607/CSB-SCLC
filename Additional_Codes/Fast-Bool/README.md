@@ -1,9 +1,9 @@
 # FastBool
 Python package for simulating Asynchronous and Synchronous Updating methods of Boolean networks
-<br>
+
 **Command to run**: <pre><code>python bool.py bool.in </code></pre>
 bool.in file has all the instructions for the simulation. These are:
-<br>
+
 **network**: name of the network (.topo and .ids file with this name should be present in the same folder) <br>
 **node_values**: Binary values assigned for the <br>
 **ini_on**: Name of nodes seprated by ',' which have initial value of 'high' (value depends on node_values) <br>
@@ -20,5 +20,5 @@ bool.in file has all the instructions for the simulation. These are:
 **NetworkX**: Boolean value whether or not to use "networkX", python package to do State transition analysis (which gives types of states either oscillatory or steady-state) <br>
 **Parallel_Process**: Boolean value on whether or not to use parallel processes <br>
 **Number_processes**: Number of cores (so parallel processes) to use <br>
-<br>
+
 For the 'network' you are required to have two files: 'name_of_network.ids' and 'name_of_network.topo' file. '.ids' file should have all the name of the nodes along with their indices (starting from 0) [format: node_name node_index]. And then for '.topo' file it should have names of 'Source' 'Target' and 'interaction'. Check out the files in the repo (of 'sclcnetwork') provided for better understanding. <br>

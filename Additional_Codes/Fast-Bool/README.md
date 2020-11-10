@@ -4,7 +4,6 @@ Python package for simulating Asynchronous and Synchronous Updating methods of B
 <br>
 **Command to run**: <pre><code>python bool.py bool.in </code></pre>
 <br>
-<br>
 bool.in file has all the instructions for the simulation. These are:
 <br>
 <br>

@@ -36,7 +36,7 @@ A **.input** (or can use any extension) file in ``input`` folder sends informati
 For example, you can look at **.input** files present [here](https://github.com/uday2607/CSB-SCLC/tree/master/Additional_Codes/BioData-Analysis/input) to get a better understanding.
   
 ### data_analysis.py  
-This is the python script which does all analysis by importing functions from other python scripts and rn them for a given dataset. Import all the functions that are to be used (i.e.. the ones given under **funcs** option in **.in** file from [``input folder``](https://github.com/uday2607/CSB-SCLC/tree/master/Additional_Codes/BioData-Analysis/input)). Then run the scipt as shown:
+This is the python script which does all analysis by importing functions from other python scripts and run them for a given dataset. Import all the functions that are to be used (i.e.. the ones given under **funcs** option in **.in** file from [``input folder``](https://github.com/uday2607/CSB-SCLC/tree/master/Additional_Codes/BioData-Analysis/input)). Then run the scipt as shown:
   
 <pre><code>python data_analysis.py {name_of_infile}.input </code></pre>
   

@@ -29,6 +29,7 @@ git clone https://github.com/uday2607/CSB-SCLC
 while read requirement; do conda install --yes $requirement || pip install $requirement; done < requirements.txt
 ```
 **4.** Go to the folder corresponding to the figure that needs to be reproduced and follow the instructions given there
+
 **5.** Voila! you are done
 
 ### Notes

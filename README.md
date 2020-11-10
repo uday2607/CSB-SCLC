@@ -23,12 +23,12 @@ This folder contains all the codes required for data analysis and simulation of 
 git clone https://github.com/uday2607/CSB-SCLC
 ```
 **2.** Set the working directory to ``CSB-SCLC``
-**3.** Install all the Required Python Packages. (**Conda** is preferable)
+**3.** Install all the Required Python Packages (**Conda** is preferable)
 ```
 while read requirement; do conda install --yes $requirement || pip install $requirement; done < requirements.txt
 ```
-**4.** Go to the folder corresponding to the figure that needs to be reproduced and follow the instructions given there.
-**5.** Voila! you are done.
+**4.** Go to the folder corresponding to the figure that needs to be reproduced and follow the instructions given there
+**5.** Voila! you are done
 
 ### Notes
 * Some of the codes have an option of running processes in Parallel. Just make sure that you don't give spawn more processes than your CPUs can handle.

@@ -2,7 +2,7 @@
 
 ##### Fig 2A i
 
-``correlation.py`` generates the **Fig 2A i** using Boolean Simulation data which can be found [here](https://github.com/uday2607/CSB-SCLC/Simulation_Data). Place data file of one trial into this folder and run the python script.
+``correlation.py`` generates the **Fig 2A i** using Boolean Simulation data which can be found [here](https://github.com/uday2607/CSB-SCLC/tree/master/Simulation_Data/Boolean). Place data file of one trial into this folder and run the python script.
 
 ##### Fig 2A ii
 

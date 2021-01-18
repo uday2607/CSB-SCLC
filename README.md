@@ -35,7 +35,7 @@ while read requirement; do conda install --yes $requirement || pip install $requ
 ### Notes
 * Some of the codes have an option of running processes in Parallel. Just make sure that you don't give spawn more processes than your CPUs can handle.
 * Installing Python packages using **Conda** would be preferable. Using **Intel Python Distribution** gives significant speed boosts in some of the codes as packages like **Numba**, **Numpy** and **Scipy** can use multiple threads under this distribution.
-* Codes like **UMAP_analysis** and **Bool.py** may take longer times. Just be patient and don't **Ctrl+C** it even if you have to wait for some time (_Just Don't do it. Time is precious_)
+* Codes like **UMAP_analysis** and **Bool.py** may take longer times. Just be patient and don't **kill** it even if you have to wait for some time (_Just Don't do it. Time is precious_)
 
 ### Requirements
 Python(Tested on Version 3.8.5)
